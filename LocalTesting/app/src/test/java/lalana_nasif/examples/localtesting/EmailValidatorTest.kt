@@ -30,4 +30,9 @@ class EmailValidatorTest {
     fun invalidEmail_missingUsername_returnsFalse() {
         Assert.assertFalse(EmailValidator.isValidEmail("@abc.com"))
     }
+
+    @Test
+    fun invalidEmail_noAtSymbol_returnsFalse() {
+        Assert.assertFalse(EmailValidator.isValidEmail("testing123"))
+    }
 }
