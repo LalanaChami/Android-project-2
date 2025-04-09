@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.testing.espresso.BasicSample;
+package com.lalana_nasif.android.testing.espresso.BasicSample;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -24,8 +24,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * An {@link Activity} that gets a text string from the user and displays it back when the user
- * clicks on one of the two buttons. The first one shows it in the same activity and the second
+ * An {@link Activity} that gets a text string from the user and displays it
+ * back when the user
+ * clicks on one of the two buttons. The first one shows it in the same activity
+ * and the second
  * one opens another activity and displays the message.
  */
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -58,13 +60,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         final int activityChangeTextBtnId = R.id.activityChangeTextBtn;
 
         if (view.getId() == changeTextBtId) {
-          // First button's interaction: set a text in a text view.
-          mTextView.setText(text);
+            // First button's interaction: set a text in a text view.
+            mTextView.setText(text);
         } else if (view.getId() == activityChangeTextBtnId) {
-          // Second button's interaction: start an activity and send a message to it.
-          Intent intent = com.example.android.testing.espresso.BasicSample.ShowTextActivity
-              .newStartIntent(this, text);
-          startActivity(intent);
+            // Second button's interaction: start an activity and send a message to it.
+            Intent intent = com.lalana_nasif.android.testing.espresso.BasicSample.ShowTextActivity
+                    .newStartIntent(this, text);
+            startActivity(intent);
         }
     }
 }
