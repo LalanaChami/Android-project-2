@@ -75,6 +75,11 @@ class ChangeTextBehaviorKtTest {
     }
 
     @Test
+    fun testInitialTextViewInMainActivity() {
+        onView(withId(R.id.textToBeChanged)).check(matches(withText("Hello Espresso!")))
+    }
+
+    @Test
     fun testChangeTextWith123() {
         onView(withId(R.id.editTextUserInput)).perform(typeText("123"), closeSoftKeyboard())
         onView(withId(R.id.changeTextBt)).perform(click())
@@ -86,6 +91,13 @@ class ChangeTextBehaviorKtTest {
         onView(withId(R.id.editTextUserInput)).perform(typeText("123"), closeSoftKeyboard())
         onView(withId(R.id.activityChangeTextBtn)).perform(click())
         onView(withId(R.id.show_text_view)).check(matches(withText("123")))
+    }
+
+    @Test
+    fun testChangeTextWithEmptyInput() {
+        onView(withId(R.id.editTextUserInput)).perform(clearText(), closeSoftKeyboard())
+        onView(withId(R.id.changeTextBt)).perform(click())
+        onView(withId(R.id.textToBeChanged)).check(matches(withText("")))
     }
 
     companion object {
