@@ -40,4 +40,9 @@ class EmailValidatorTest {
     fun invalidEmail_emptyString_returnsFalse() {
         Assert.assertFalse(EmailValidator.isValidEmail(""))
     }
+
+    @Test
+    fun invalidEmail_nullInput_returnsFalse() {
+        Assert.assertFalse(EmailValidator.isValidEmail(null))
+    }
 }
