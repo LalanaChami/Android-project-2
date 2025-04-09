@@ -1,4 +1,4 @@
-package jlin2.examples.localtesting
+package lalana_nasif.examples.localtesting
 
 import android.app.Activity
 import android.content.SharedPreferences

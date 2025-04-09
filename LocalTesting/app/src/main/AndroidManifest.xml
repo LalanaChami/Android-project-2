@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="jlin2.examples.localtesting">
+    package="lalana_nasif.examples.localtesting">
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.LocalTesting"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="lalana_nasif.examples.localtesting.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
