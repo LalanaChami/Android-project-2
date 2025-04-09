@@ -100,6 +100,13 @@ class ChangeTextBehaviorKtTest {
         onView(withId(R.id.textToBeChanged)).check(matches(withText("")))
     }
 
+    @Test
+    fun testOpenActivityWithEmptyInput() {
+        onView(withId(R.id.editTextUserInput)).perform(clearText(), closeSoftKeyboard())
+        onView(withId(R.id.activityChangeTextBtn)).perform(click())
+        onView(withId(R.id.show_text_view)).check(matches(withText("")))
+    }
+
     companion object {
 
         val STRING_TO_BE_TYPED = "Espresso"
